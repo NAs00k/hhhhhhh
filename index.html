@@ -3014,7 +3014,7 @@
                     window.open('https://telegram.org/', '_blank');
                 }
             });
-//Подключение своего кошелька
+            //Подключение своего кошелька
             <input type="text"
             id="walletAddress"
             placeholder="Введите адрес кошелька">
@@ -3028,11 +3028,11 @@
                         local.\Storage.setItem("userWallet", wallet);
                         // Сохраняем в браузере
                         alert("Кошелёк привязан!");
+                        }
                     }
+                    </script>
                 }
-                </script>
-    }
-    });
+            });
             // Переключение табов
             document.querySelectorAll('.nav-tab').forEach(tab => {
                 tab.addEventListener('click', () => {
