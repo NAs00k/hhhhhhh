@@ -3014,7 +3014,25 @@
                     window.open('https://telegram.org/', '_blank');
                 }
             });
-
+//Подключение своего кошелька
+            <input type="text"
+            id="walletAddress"
+            placeholder="Введите адрес кошелька">
+                <button
+            onclick="saveWallet()">Привязать кошелёк</button>
+            <script>
+                function saveWallet() {
+                    const wallet=document.getElementById("walletAddress").value;
+                    if (wallet.startsWith("0x") && wallet.leght===42) {
+                        // Проверка ETH-адреса
+                        local.\Storage.setItem("userWallet", wallet);
+                        // Сохраняем в браузере
+                        alert("Кошелёк привязан!");
+                    }
+                }
+                </script>
+    }
+    });
             // Переключение табов
             document.querySelectorAll('.nav-tab').forEach(tab => {
                 tab.addEventListener('click', () => {
