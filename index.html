@@ -3022,11 +3022,10 @@
             onclick="saveWallet()">Привязать кошелёк</button>
             <script>
                 function saveWallet() {
-                    const wallet=document.getElementById("walletAddress").value;
-                    if (wallet.startsWith("0x") && wallet.leght===42) {
-                        // Проверка ETH-адреса
+                    const wallet = document.getElementById("walletAddress").value;
+                    if (wallet.startsWith("0x") && wallet.leght === 42) 
+                    {
                         local.\Storage.setItem("userWallet", wallet);
-                        // Сохраняем в браузере
                         alert("Кошелёк привязан!");
                         }
                     }
